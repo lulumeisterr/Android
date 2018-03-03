@@ -3,7 +3,10 @@ package fiap.com.br.listaiterativa;
 import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,6 +49,24 @@ public class ListaActivity extends AppCompatActivity {
 
         //Metodo que realizará o click
         onbtClick();
+
+        registerForContextMenu(lv);
+    }
+
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        if (v.getId() == R.id.lista_add) {
+            menu.add("Excluir");
+        }
+    }
+
+    public boolean onContextItemSelected(MenuItem item) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        switch (item.getItemId()) {
+            case 0:
+                arraylista.remove(info.position);
+                Adapter.notifyDataSetChanged();
+        }
+        return true;
     }
 
     public void onbtClick(){
@@ -57,20 +78,19 @@ public class ListaActivity extends AppCompatActivity {
                 arraylista.add(result);
                 Adapter.notifyDataSetChanged();
 
-                Set<String> SemRep = new HashSet<String>(arraylista);
-                Iterator<String> IteradoSemRep = SemRep.iterator();
+                for(int i = 0; i < arraylista.size(); i++) {
+                    if (arraylista.get(i).equals("")) {
+                        Toast.makeText(getApplicationContext(), "Campo vazio", Toast.LENGTH_SHORT).show();
+                        arraylista.remove(i);
+                    }
+
+                }
+//                Set<String> SemRep = new HashSet<String>(arraylista);
+//                Iterator<String> IteradoSemRep = SemRep.iterator();
              }
 
-//                for (int i = 0; i < arraylista.size(); i++){
-//
-//                        if(arraylista.contains(result)) {
-//                            Toast.makeText(getApplicationContext(), "Dado aceito", Toast.LENGTH_SHORT).show();
-//                        }else if (arraylista.get(i).equals(result)){
-//                            Toast.makeText(getApplicationContext(), "Dado duplicado", Toast.LENGTH_SHORT).show();
-//                            arraylista.remove(i);
-//                        }
-//                }
-//            }
         });
     }
+
+
 }
