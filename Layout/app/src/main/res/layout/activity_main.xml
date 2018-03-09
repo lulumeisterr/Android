@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    tools:context="com.example.logonrm.myapplication.MainActivity"
+    android:weightSum="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:layout_margin="50dp"
+    android:background="@android:color/black"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_weight="0.05">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="36dp"
+            android:text="Docs"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="25sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/holo_blue_light"
+            >
+
+        </View>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:text="Version 1.3.422.14.35"
+            android:id="@+id/textView2" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:text="Copyright Google 2011-2014"
+                android:id="@+id/textView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:padding="1dp"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Terms"
+                android:background="@android:color/background_light"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="91dp"
+                android:layout_marginTop="-50dp"
+                android:textAlignment="center"
+                android:text="Terms"
+                android:background="@android:color/background_light"
+                android:id="@+id/button2"
+                 />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="185dp"
+                android:layout_marginTop="-48dp"
+                android:textAlignment="center"
+                android:background="@android:color/background_light"
+                android:text="Terms"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
