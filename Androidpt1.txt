@@ -1,0 +1,66 @@
+Intent  -> Ela permite que sua aplicação realize ações de inicializações com outras telas.
+
+            *  Como você apertar um botão e chamar uma tela
+            *  Iniciar o GPS do aparelho.
+
+Intents Explicido -> Usa-se um intent explícito para iniciar um componente no próprio aplicativo porque se sabe o nome de classe da atividade ou serviço que se deseja iniciar
+
+Intents implícitos ->  permite que um componente de outro aplicativo processe o mesmo. 
+	              Por exemplo, se você deseja exibir ao usuário uma localização em um mapa, 
+	              pode usar um intent implícito para solicitar que outro aplicativo capaz exiba uma localização especificada no mapa.
+
+Intent-filter -> Faz com que a MainActivity seja a tela inicial da nossa aplicação , Ela define oq vai abrir
+
+
+Activity ->  representa uma única tela em um aplicativo. 
+	É possível iniciar uma nova instância de uma Activity passando uma Intent para startActivity(). 
+	A Intent descreve a atividade a iniciar e carrega todos os dados necessários.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Android Manifest - Onde contem as principais configurações para rodar o app
+
+package = " Ele é o identificador unico do aplicativo "
+
+-AllowBackup = Faz backup autimatico da nossa aplicacao
+-Icon = @mipmap para referenciar Pastas/Arquivos
+
+Exibir permissoes no manifest <uses-permission android:name="">
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Arquivo R.java
+
+O Arquivo R.java , é um arquivo gerado automaticamente , e a função
+dele é connectar tudo o'que é adicionado em nossas pastas com 
+os codigos adicionados em java
+
+Ele connecta os elementos inseridos no projeto com a programação
+Exemplo que eu queria chamar uma imagem dentro do main no metodo
+onCreate , Basta setar o metodo setContentView(R.pastaEscolhida);
+R se referencia como res ou resource
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dimen
+
+Ele centraliza as dimensões dos arquivos como
+" Eu quero criar uma dimensao especifica para os nossos textos ou componentes e tamanho de fontes "
+
+dp = density independent pixel == Controllar dimensoes
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Arquivo strings.xml
+
+este arquivo serve para centralizar os textos que vc utiliza em seu
+app.
+
+é possivel criar strings dentro do xml e utilizar os textos
+que vc criou em varios locais tipo suas paginas de layout
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+XML - Linguagem de marcação
+Estruturas usadas : tags
+
+Usamos xml pois a maior parte dos arquivos no android usa-se XML
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+https://developer.android.com/guide/components/intents-filters.html
