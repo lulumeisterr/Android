@@ -3,18 +3,47 @@ Intent  -> Ela permite que sua aplicação realize ações de inicializações com out
             *  Como você apertar um botão e chamar uma tela
             *  Iniciar o GPS do aparelho.
 
-Intents Explicido -> Usa-se um intent explícito para iniciar um componente no próprio aplicativo porque se sabe o nome de classe da atividade ou serviço que se deseja iniciar
+Intents Explicido -> Usa-se um intent explícito para iniciar um componente no próprio aplicativo porque se sabe o nome 
+		     de classe da atividade ou serviço que se deseja iniciar. Executa o app padrão do celular se nao houver outros relacionados ao mesmo
 
-Intents implícitos ->  permite que um componente de outro aplicativo processe o mesmo. 
+Intents implícitos -> permite que um componente de outro aplicativo processe o mesmo. 
 	              Por exemplo, se você deseja exibir ao usuário uma localização em um mapa, 
 	              pode usar um intent implícito para solicitar que outro aplicativo capaz exiba uma localização especificada no mapa.
 
 Intent-filter -> Faz com que a MainActivity seja a tela inicial da nossa aplicação , Ela define oq vai abrir
 
+- A Intent descreve a atividade a iniciar e carrega todos os dados necessários.
 
-Activity ->  representa uma única tela em um aplicativo. 
-	É possível iniciar uma nova instância de uma Activity passando uma Intent para startActivity(). 
-	A Intent descreve a atividade a iniciar e carrega todos os dados necessários.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Activity -> representa uma única tela em um aplicativo. 
+	    É possível iniciar uma nova instância de uma Activity passando uma Intent para startActivity(). 
+
+O Ciclo de vida de uma activity é divido em 3 niveis de ciclo
+
+1 - Vida completa - Aborta todos os ciclo desdo oncreate ate o onDestroy
+2 - Vida visivel - Ele aborta so onde o usuario pode ver sua atividade do onStart ate o onStop
+3 - Vida em primeiro plano - Ela aborta todo o conteudo onde o usuario interage com a atividade como apertar um botao : onResumo até onPause
+
+
+
+onCreate() - É a primeira função que deve ser chamada em uma Activity. 
+	     responsável por carregar os layouts XML e outras operações de inicialização. 
+	     É executada apenas uma vez. O Usuario nao ver nada no onCreat
+
+onStart() - Onde o usuario já consegue ver a tela mas ele ainda não pode ter a interação
+
+onResume() - Onde o usuario ja esta em execução , onde o usuario ja pode interagir com a tela do app.
+	     O aplicativo permanece nesse estado até algo acontecer para tirar o foco do aplicativo.
+	     Esse evento pode ser, por exemplo, receber uma chamada telefônica, 
+	     a navegação do usuário para outra atividade ou a tela do dispositivo está desligando
+
+
+
+
+
+
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Android Manifest - Onde contem as principais configurações para rodar o app
