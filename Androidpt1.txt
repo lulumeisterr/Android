@@ -16,8 +16,10 @@ Intent-filter -> Faz com que a MainActivity seja a tela inicial da nossa aplicaç
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Activity -> representa uma única tela em um aplicativo. 
-	    É possível iniciar uma nova instância de uma Activity passando uma Intent para startActivity(). 
+Activity ->  Activities são componentes independentes que representam as interfaces do seu aplicativo Ou seja
+	representa uma única tela em um aplicativo. 
+
+É possível iniciar uma nova instância de uma Activity passando uma Intent para startActivity(). 
 
 O Ciclo de vida de uma activity é divido em 3 niveis de ciclo
 
@@ -25,25 +27,53 @@ O Ciclo de vida de uma activity é divido em 3 niveis de ciclo
 2 - Vida visivel - Ele aborta so onde o usuario pode ver sua atividade do onStart ate o onStop
 3 - Vida em primeiro plano - Ela aborta todo o conteudo onde o usuario interage com a atividade como apertar um botao : onResumo até onPause
 
-
-
 onCreate() - É a primeira função que deve ser chamada em uma Activity. 
 	     responsável por carregar os layouts XML e outras operações de inicialização. 
 	     É executada apenas uma vez. O Usuario nao ver nada no onCreat
 
-onStart() - Onde o usuario já consegue ver a tela mas ele ainda não pode ter a interação
+	onCreate recebe um parametro do tipo Bundle, 
+	ele é responsável por guardar o estado da Activity quando ela é reiniciada, como se fosse um cache.
 
-onResume() - Onde o usuario ja esta em execução , onde o usuario ja pode interagir com a tela do app.
-	     O aplicativo permanece nesse estado até algo acontecer para tirar o foco do aplicativo.
-	     Esse evento pode ser, por exemplo, receber uma chamada telefônica, 
-	     a navegação do usuário para outra atividade ou a tela do dispositivo está desligando
+	 setContentView(R.layout.activity_main), é responsável por configurar o layout XML na nossa 
+	Activity e definir todos os elementos de interface do usuário, tais como o EditText e Buttons.
+
+onStart() -  à medida que o aplicativo se prepara para que a atividade entre no primeiro plano e se torne interativa. Ou seja
+	Onde o usuario já consegue ver a tela mas ele ainda não pode ter a interação
+
+onResume() -  Onde o usuario ja esta em execução , onde o usuario ja pode interagir com a tela do app.
+	      O aplicativo permanece nesse estado até algo acontecer para tirar o foco do aplicativo.
+	      Esse evento pode ser, por exemplo, receber uma chamada telefônica, 
+	      a navegação do usuário para outra atividade ou a tela do dispositivo está desligando
+
+onPause() - Ele faz uma tomada de decisão e vê o'que será realizado após. Ex: Iniciasse os metodos onCreate,Start,Resume e vc minimiza a Tela ,
+	  quando vc minimiza a tela ele acionará o onPause e congelará essa tela. então a tela minimizada passará a ser onStop() , Quando você voltar na tela
+	  novamente ela acionará o OnStart() novamente e o acionará o onResume().
+
+onStop() - chamado quando a Activity não está mais visível para o usuário. 
+	Isso pode acontecer porque ela está sendo destruída ou porque outra 
+	Activity foi reiniciada e está em sua frente
 
 
+onDestroy() - O método onDestroy é chamado quando a Activity vai ser destruida.  
+	    É a última chamada que a Activity receberá antes de ser finalizada.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+LinearLayoult - Layout que organiza os filhos em uma única linha horizontal ou vertical. Ele cria uma barra de rolagem se o comprimento da janela excede o comprimento da tela.
+	      Para decidir qual será a orientação do seu Linear Layout deve-se trabalhar com a notação android:orientation
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+ConstraintLayoult
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+RelativeLayoult - Permite especificar a localização de objetos filhos relativos entre si (filho A à esquerda do filho B) ou relativos aos pais (alinhados no topo do pai).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+wrap_content -  Essa notação diz que o componente deve ocupar apenas o seu tamanho, sem nenhum tipo de refatoração;
+match_parent - Ocupa toda a extensão da tela
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Android Manifest - Onde contem as principais configurações para rodar o app
