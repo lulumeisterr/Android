@@ -3,6 +3,30 @@ Intent  -> Ela permite que sua aplicação realize ações de inicializações com out
             *  Como você apertar um botão e chamar uma tela
             *  Iniciar o GPS do aparelho.
 
+Tres usos fundamentais do Intent ->  
+
+1 -  Para iniciar uma atividade
+
+
+Uma Activity representa uma única tela em um aplicativo. 
+É possível iniciar uma nova instância de uma Activity passando uma Intent para startActivity(). 
+A Intent descreve a atividade a iniciar e carrega todos os dados necessários.
+Se você deseja receber um resultado da atividade quando ela finalizar, 
+chame startActivityForResult(). 
+Sua atividade recebe o resultado como um objeto Intent separado no retorno de chamada de onActivityResult() da atividade.
+
+2 -  Para iniciar um serviço
+
+O Service é um componente que realiza operações em segundo plano sem interface do usuário. 
+É possível iniciar um serviço para realizar uma operação que acontece uma vez (como baixar um arquivo) 
+passando uma Intent a startService(). A Intent descreve o serviço a iniciar e carrega todos os dados necessários.
+
+3  - Para fornecer uma transmissão
+
+Transmissão é uma mensagem que qualquer aplicativo pode receber. 
+O sistema fornece diversas transmissões para eventos do sistema, como quando o sistema inicializa ou o dispositivo inicia o carregamento
+
+
 Intents Explicido -> Usa-se um intent explícito para iniciar um componente no próprio aplicativo porque se sabe o nome 
 		     de classe da atividade ou serviço que se deseja iniciar. Executa o app padrão do celular se nao houver outros relacionados ao mesmo
 
@@ -17,9 +41,18 @@ Intent-filter -> Faz com que a MainActivity seja a tela inicial da nossa aplicaç
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Activity ->  Activities são componentes independentes que representam as interfaces do seu aplicativo Ou seja
-	representa uma única tela em um aplicativo. 
+	representa uma única tela em um aplicativo para os usuários podem interagir para fazer algo, como discar um
+	número no telefone, tirar uma foto etc..
 
-É possível iniciar uma nova instância de uma Activity passando uma Intent para startActivity(). 
+Activity For Result  -> Quando uma tela A chama uma tela B e espera algum tipo de retorno, você usa a startActivityForResult para chamar a tela B e em B você 
+seta RESULT_OK se tudo sair como você quer caso contrario o 
+próprio sistema colocara RESULT_CANCELLED;
+
+É possível iniciar uma nova instância de uma Activity -> passando uma Intent para startActivity(). 
+
+Para finalizar uma Activity -> chame o método finish().
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 O Ciclo de vida de uma activity é divido em 3 niveis de ciclo
 
@@ -58,9 +91,17 @@ onDestroy() - O método onDestroy é chamado quando a Activity vai ser destruida.
 	    É a última chamada que a Activity receberá antes de ser finalizada.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Views
+
+- O alinhamento da view pode ser realizado através da propriedade android:layout_gravity e que pode ser center_vertical, center_horizontal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 LinearLayoult - Layout que organiza os filhos em uma única linha horizontal ou vertical. Ele cria uma barra de rolagem se o comprimento da janela excede o comprimento da tela.
 	      Para decidir qual será a orientação do seu Linear Layout deve-se trabalhar com a notação android:orientation
+
+A propriedade android:orientation define a orientação: vertical ou horizontal;
+A Propriedade android:layout_weight="1" , ocupa todo o espaço disponivel;
+A Propriedade android:layout_gravity , é o posicionamento da view 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -68,12 +109,29 @@ ConstraintLayoult
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-RelativeLayoult - Permite especificar a localização de objetos filhos relativos entre si (filho A à esquerda do filho B) ou relativos aos pais (alinhados no topo do pai).
+TABLE LAYOUT
+
+Organiza as views em uma tabela de modo semelhante às tabelas HTML;
+Cada linha da tabela é representada por uma TableRow;
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-wrap_content -  Essa notação diz que o componente deve ocupar apenas o seu tamanho, sem nenhum tipo de refatoração;
-match_parent - Ocupa toda a extensão da tela
+RelativeLayoult - Organiza as views em posições relativas. A posição de cada elemento pode ser definido em relação ao outro elemento da tela;
+
+As propriedades
+
+android:layout_alignParentTop: alinha no topo, se true;
+android:layout_centerVertical:   alinha no centro, se true;
+android:layout_below:              abaixo da view;
+android:layout_toRightOf:          a direita da view;
+android:layout_toLeftOf:            a esquerda da view;
+android:layout_above:              acima da view;
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+wrap_content -  o componente ocupa a medida necessária do que estiver contido nele 
+match_parent - Ocupa toda a extensão da tela de acordo com o componente pai
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Android Manifest - Onde contem as principais configurações para rodar o app
