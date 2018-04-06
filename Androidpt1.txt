@@ -1,6 +1,6 @@
-Intent  -> Ela permite que sua aplicaÁ„o realize aÁıes de inicializaÁıes com outras telas.
+Intent  -> Ela permite que sua aplica√ß√£o realize a√ß√µes de inicializa√ß√µes com outras telas.
 
-            *  Como vocÍ apertar um bot„o e chamar uma tela
+            *  Como voc√™ apertar um bot√£o e chamar uma tela
             *  Iniciar o GPS do aparelho.
 
 Tres usos fundamentais do Intent ->  
@@ -8,117 +8,130 @@ Tres usos fundamentais do Intent ->
 1 -  Para iniciar uma atividade
 
 
-Uma Activity representa uma ˙nica tela em um aplicativo. 
-… possÌvel iniciar uma nova inst‚ncia de uma Activity passando uma Intent para startActivity(). 
-A Intent descreve a atividade a iniciar e carrega todos os dados necess·rios.
-Se vocÍ deseja receber um resultado da atividade quando ela finalizar, 
+Uma Activity representa uma √∫nica tela em um aplicativo. 
+√â poss√≠vel iniciar uma nova inst√¢ncia de uma Activity passando uma Intent para startActivity(). 
+A Intent descreve a atividade a iniciar e carrega todos os dados necess√°rios.
+Se voc√™ deseja receber um resultado da atividade quando ela finalizar, 
 chame startActivityForResult(). 
 Sua atividade recebe o resultado como um objeto Intent separado no retorno de chamada de onActivityResult() da atividade.
 
-2 -  Para iniciar um serviÁo
+2 -  Para iniciar um servi√ßo
 
-O Service È um componente que realiza operaÁıes em segundo plano sem interface do usu·rio. 
-… possÌvel iniciar um serviÁo para realizar uma operaÁ„o que acontece uma vez (como baixar um arquivo) 
-passando uma Intent a startService(). A Intent descreve o serviÁo a iniciar e carrega todos os dados necess·rios.
+O Service √© um componente que realiza opera√ß√µes em segundo plano sem interface do usu√°rio. 
+√â poss√≠vel iniciar um servi√ßo para realizar uma opera√ß√£o que acontece uma vez (como baixar um arquivo) 
+passando uma Intent a startService(). A Intent descreve o servi√ßo a iniciar e carrega todos os dados necess√°rios.
 
-3  - Para fornecer uma transmiss„o
+3  - Para fornecer uma transmiss√£o
 
-Transmiss„o È uma mensagem que qualquer aplicativo pode receber. 
-O sistema fornece diversas transmissıes para eventos do sistema, como quando o sistema inicializa ou o dispositivo inicia o carregamento
+Transmiss√£o √© uma mensagem que qualquer aplicativo pode receber. 
+O sistema fornece diversas transmiss√µes para eventos do sistema, como quando o sistema inicializa ou o dispositivo inicia o carregamento
 
 
-Intents Explicido -> Usa-se um intent explÌcito para iniciar um componente no prÛprio aplicativo porque se sabe o nome 
-		     de classe da atividade ou serviÁo que se deseja iniciar. Executa o app padr„o do celular se nao houver outros relacionados ao mesmo
+Intents Explicido -> Usa-se um intent expl√≠cito para iniciar um componente no pr√≥prio aplicativo porque se sabe o nome 
+		     de classe da atividade ou servi√ßo que se deseja iniciar. Executa o app padr√£o do celular se nao houver outros relacionados ao mesmo
 
-Intents implÌcitos -> permite que um componente de outro aplicativo processe o mesmo. 
-	              Por exemplo, se vocÍ deseja exibir ao usu·rio uma localizaÁ„o em um mapa, 
-	              pode usar um intent implÌcito para solicitar que outro aplicativo capaz exiba uma localizaÁ„o especificada no mapa.
+Intents impl√≠citos -> permite que um componente de outro aplicativo processe o mesmo. 
+	              Por exemplo, se voc√™ deseja exibir ao usu√°rio uma localiza√ß√£o em um mapa, 
+	              pode usar um intent impl√≠cito para solicitar que outro aplicativo capaz exiba uma localiza√ß√£o especificada no mapa.
 
-Intent-filter -> Faz com que a MainActivity seja a tela inicial da nossa aplicaÁ„o , Ela define oq vai abrir
+Intent-filter -> Faz com que a MainActivity seja a tela inicial da nossa aplica√ß√£o , Ela define oq vai abrir
 
-- A Intent descreve a atividade a iniciar e carrega todos os dados necess·rios.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Activity ->  Activities s„o componentes independentes que representam as interfaces do seu aplicativo Ou seja
-	representa uma ˙nica tela em um aplicativo para os usu·rios podem interagir para fazer algo, como discar um
-	n˙mero no telefone, tirar uma foto etc..
-
-Activity For Result  -> Quando uma tela A chama uma tela B e espera algum tipo de retorno, vocÍ usa a startActivityForResult para chamar a tela B e em B vocÍ 
-seta RESULT_OK se tudo sair como vocÍ quer caso contrario o 
-prÛprio sistema colocara RESULT_CANCELLED;
-
-… possÌvel iniciar uma nova inst‚ncia de uma Activity -> passando uma Intent para startActivity(). 
-
-Para finalizar uma Activity -> chame o mÈtodo finish().
+- A Intent descreve a atividade a iniciar e carrega todos os dados necess√°rios.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-O Ciclo de vida de uma activity È divido em 3 niveis de ciclo
+Activity ->  Activities s√£o componentes independentes que representam as interfaces do seu aplicativo Ou seja
+	representa uma √∫nica tela em um aplicativo para os usu√°rios podem interagir para fazer algo, como discar um
+	n√∫mero no telefone, tirar uma foto etc..
 
-1 - Vida completa - Aborta todos os ciclo desdo oncreate ate o onDestroy
-2 - Vida visivel - Ele aborta so onde o usuario pode ver sua atividade do onStart ate o onStop
-3 - Vida em primeiro plano - Ela aborta todo o conteudo onde o usuario interage com a atividade como apertar um botao : onResumo atÈ onPause
+Activity For Result  -> Quando uma tela A chama uma tela B e espera algum tipo de retorno, voc√™ usa a startActivityForResult para chamar a tela B e em B voc√™ 
+seta RESULT_OK se tudo sair como voc√™ quer caso contrario o 
+pr√≥prio sistema colocara RESULT_CANCELLED;
 
-onCreate() - … a primeira funÁ„o que deve ser chamada em uma Activity. 
-	     respons·vel por carregar os layouts XML e outras operaÁıes de inicializaÁ„o. 
-	     … executada apenas uma vez. O Usuario nao ver nada no onCreat
+√â poss√≠vel iniciar uma nova inst√¢ncia de uma Activity -> passando uma Intent para startActivity(). 
+
+Para finalizar uma Activity -> chame o m√©todo finish().
+
+
+ActionBar -
+	    1 ¬∞ Criar um XML 
+	    
+	    2 ¬∞ Colocar os itens da actionbar , ShowAsAction = Para o bot√£o ficar no canto superior da tela
+	    
+	    3 ¬∞ Passar os id para as propriedades
+	    
+	    4 ¬∞ Chamar o metodo onCreateOptionsMenu(Churros) , Chamar o 
+	    getMenuInflate.Inflate(R.pasta.arquivo, Churros) para exibir a actionBAR
+	    
+	    5 ¬∞ Chamar o metodo OnOptionItemSelected(Menuitem Item) ,  Ele est√° recuperando o click do item
+	    
+	    6 ¬∞ Fazer as condi√ß√µes para ter acesso as propriedades dos item's criado
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+onCreate() - √â a primeira fun√ß√£o que deve ser chamada em uma Activity. 
+	     respons√°vel por carregar os layouts XML e outras opera√ß√µes de inicializa√ß√£o. 
+	     √â executada apenas uma vez. O Usuario nao ver nada no onCreat
 
 	onCreate recebe um parametro do tipo Bundle, 
-	ele È respons·vel por guardar o estado da Activity quando ela È reiniciada, como se fosse um cache.
+	ele √© respons√°vel por guardar o estado da Activity quando ela √© reiniciada, como se fosse um cache.
 
-	 setContentView(R.layout.activity_main), È respons·vel por configurar o layout XML na nossa 
-	Activity e definir todos os elementos de interface do usu·rio, tais como o EditText e Buttons.
+	 setContentView(R.layout.activity_main), √© respons√°vel por configurar o layout XML na nossa 
+	Activity e definir todos os elementos de interface do usu√°rio, tais como o EditText e Buttons.
 
-onStart() -  ‡ medida que o aplicativo se prepara para que a atividade entre no primeiro plano e se torne interativa. Ou seja
-	Onde o usuario j· consegue ver a tela mas ele ainda n„o pode ter a interaÁ„o
+onStart() -  √† medida que o aplicativo se prepara para que a atividade entre no primeiro plano e se torne iterativa. Ou seja
+	Onde o usuario j√° consegue ver a tela mas ele ainda n√£o pode ter a intera√ß√£o
 
-onResume() -  Onde o usuario ja esta em execuÁ„o , onde o usuario ja pode interagir com a tela do app.
-	      O aplicativo permanece nesse estado atÈ algo acontecer para tirar o foco do aplicativo.
-	      Esse evento pode ser, por exemplo, receber uma chamada telefÙnica, 
-	      a navegaÁ„o do usu·rio para outra atividade ou a tela do dispositivo est· desligando
+onResume() -  Onde o usuario ja esta em execu√ß√£o , onde o usuario ja pode interagir com a tela do app.
+	      O aplicativo permanece nesse estado at√© algo acontecer para tirar o foco do aplicativo.
+	      Esse evento pode ser, por exemplo, receber uma chamada telef√¥nica, 
+	      a navega√ß√£o do usu√°rio para outra atividade ou a tela do dispositivo est√° desligando
 
-onPause() - Ele faz uma tomada de decis„o e vÍ o'que ser· realizado apÛs. Ex: Iniciasse os metodos onCreate,Start,Resume e vc minimiza a Tela ,
-	  quando vc minimiza a tela ele acionar· o onPause e congelar· essa tela. ent„o a tela minimizada passar· a ser onStop() , Quando vocÍ voltar na tela
-	  novamente ela acionar· o OnStart() novamente e o acionar· o onResume().
+onPause() - Ele faz uma tomada de decis√£o e v√™ o'que ser√° realizado ap√≥s. Ex: Iniciasse os metodos onCreate,Start,Resume e vc minimiza a Tela ,
+	  quando vc minimiza a tela ele acionar√° o onPause e congelar√° essa tela. ent√£o a tela minimizada passar√° a ser onStop() , Quando voc√™ voltar na tela
+	  novamente ela acionar√° o OnStart() novamente e o acionar√° o onResume().
 
-onStop() - chamado quando a Activity n„o est· mais visÌvel para o usu·rio. 
-	Isso pode acontecer porque ela est· sendo destruÌda ou porque outra 
-	Activity foi reiniciada e est· em sua frente
+onStop() - chamado quando a Activity n√£o est√° mais vis√≠vel para o usu√°rio. 
+	Isso pode acontecer porque ela est√° sendo destru√≠da ou porque outra 
+	Activity foi reiniciada e est√° em sua frente
 
 
-onDestroy() - O mÈtodo onDestroy È chamado quando a Activity vai ser destruida.  
-	    … a ˙ltima chamada que a Activity receber· antes de ser finalizada.
+onDestroy() - O m√©todo onDestroy √© chamado quando a Activity vai ser destruida.  
+	    √â a √∫ltima chamada que a Activity receber√° antes de ser finalizada.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Views
 
-- O alinhamento da view pode ser realizado atravÈs da propriedade android:layout_gravity e que pode ser center_vertical, center_horizontal
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- O alinhamento da view pode ser realizado atrav√©s da propriedade android:layout_gravity e que pode ser center_vertical, center_horizontal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LinearLayoult - Layout que organiza os filhos em uma √∫nica linha horizontal ou vertical.
+                Ele cria uma barra de rolagem se o comprimento da janela excede o comprimento da tela.
+	        Para decidir qual ser√° a orienta√ß√£o do seu Linear Layout deve-se trabalhar 
+		com a nota√ß√£o android:orientation
+	      
+ 1¬∞  Organiza a view em uma dire√ß√£o ( vertical ou horizontal ) usa o android:orientation
+ 
+ 2¬∞ LinearLayoult - Sem a propriedade orienta√ß√£o , ele ficar√° um do lado do outro , 
+ quando voc√™ setar a orienta√ß√£o vc dever√° especificar onde ele ficara
 
-LinearLayoult - Layout que organiza os filhos em uma ˙nica linha horizontal ou vertical. Ele cria uma barra de rolagem se o comprimento da janela excede o comprimento da tela.
-	      Para decidir qual ser· a orientaÁ„o do seu Linear Layout deve-se trabalhar com a notaÁ„o android:orientation
+A propriedade android:orientation define a orienta√ß√£o: vertical ou horizontal;
+A Propriedade android:layout_weight="1" , ocupa todo o espa√ßo disponivel;
+A Propriedade android:layout_gravity , √© o posicionamento da view 
 
-A propriedade android:orientation define a orientaÁ„o: vertical ou horizontal;
-A Propriedade android:layout_weight="1" , ocupa todo o espaÁo disponivel;
-A Propriedade android:layout_gravity , È o posicionamento da view 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-ConstraintLayoult
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TABLE LAYOUT
 
-Organiza as views em uma tabela de modo semelhante ‡s tabelas HTML;
-Cada linha da tabela È representada por uma TableRow;
+Organiza as views em uma tabela de modo semelhante √†s tabelas HTML;
+Cada linha da tabela √© representada por uma TableRow;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+RelativeLayoult - Organiza as views em posi√ß√µes relativas. A posi√ß√£o de cada elemento pode ser definido em rela√ß√£o ao outro elemento da tela;
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-RelativeLayoult - Organiza as views em posiÁıes relativas. A posiÁ„o de cada elemento pode ser definido em relaÁ„o ao outro elemento da tela;
-
+1¬∞ Relative - Sem elementos ele fica no Canto superior esquerdo e se nao setar as propriedades de margens ele ir√° sobrepor
+voc√™ se baseia nos outros elementos para montar outros elementos na tela
+	
 As propriedades
 
 android:layout_alignParentTop: alinha no topo, se true;
@@ -128,56 +141,53 @@ android:layout_toRightOf:          a direita da view;
 android:layout_toLeftOf:            a esquerda da view;
 android:layout_above:              acima da view;
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wrap_content -  o componente ocupa a medida necess√°ria do que estiver contido nele 
+match_parent - Ocupa toda a extens√£o da tela de acordo com o componente pai
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Android Manifest - Onde contem as principais configura√ß√µes para rodar o app
 
-wrap_content -  o componente ocupa a medida necess·ria do que estiver contido nele 
-match_parent - Ocupa toda a extens„o da tela de acordo com o componente pai
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Android Manifest - Onde contem as principais configuraÁıes para rodar o app
-
-package = " Ele È o identificador unico do aplicativo "
+package = " Ele √© o identificador unico do aplicativo "
 
 -AllowBackup = Faz backup autimatico da nossa aplicacao
 -Icon = @mipmap para referenciar Pastas/Arquivos
 
 Exibir permissoes no manifest <uses-permission android:name="">
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Arquivo R.java
 
-O Arquivo R.java , È um arquivo gerado automaticamente , e a funÁ„o
-dele È connectar tudo o'que È adicionado em nossas pastas com 
+O Arquivo R.java , √© um arquivo gerado automaticamente , e a fun√ß√£o
+dele √© connectar tudo o'que √© adicionado em nossas pastas com 
 os codigos adicionados em java
 
-Ele connecta os elementos inseridos no projeto com a programaÁ„o
+Ele connecta os elementos inseridos no projeto com a programa√ß√£o
 Exemplo que eu queria chamar uma imagem dentro do main no metodo
 onCreate , Basta setar o metodo setContentView(R.pastaEscolhida);
 R se referencia como res ou resource
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dimen
 
-Ele centraliza as dimensıes dos arquivos como
+Ele centraliza as dimens√µes dos arquivos como
 " Eu quero criar uma dimensao especifica para os nossos textos ou componentes e tamanho de fontes "
 
 dp = density independent pixel == Controllar dimensoes
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Arquivo strings.xml
 
 este arquivo serve para centralizar os textos que vc utiliza em seu
 app.
 
-È possivel criar strings dentro do xml e utilizar os textos
+√© possivel criar strings dentro do xml e utilizar os textos
 que vc criou em varios locais tipo suas paginas de layout
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-XML - Linguagem de marcaÁ„o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+XML - Linguagem de marca√ß√£o
 Estruturas usadas : tags
 
 Usamos xml pois a maior parte dos arquivos no android usa-se XML
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 https://developer.android.com/guide/components/intents-filters.html
