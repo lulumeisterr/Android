@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MeuApp</string>
+    <string name="app_texto_name">Digite o seu nome</string>
+    <string name="app_bt_ok">Confirmar</string>
+</resources>
