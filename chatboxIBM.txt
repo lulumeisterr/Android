@@ -1,0 +1,14 @@
+Credenciais - Você filtra para quem pode usar , onde você fornece um usuario e senha mas existe outra forma
+de se fazer onde vc deixa um app connectado.
+
+WorkSpace - é basicamente um chatboot , a programação está na workspace
+
+Intent -  intenção concretizada onde você diz que seu usuario tem X intents , pois o meu chatbot so vai entender
+o'que eu programei nele.
+
+Arvore do dialogo
+
+entidade - categoria de objetos , ex : ela representa todos os nomes de pessoa 
+
+@contato.literal - recupera oq foi digitado
+@contato.value - tbm recupera
