@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_telefone"
+            android:icon="@mipmap/fone"
+            android:title="Discar Telefone"
+            />
+
+        <item
+            android:id="@+id/nav_tela3"
+            android:icon="@mipmap/ic_launcher_nome"
+            android:title="Abrir tela 3"
+            />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+            android:id="@+id/nav_git"
+            android:icon="@mipmap/git"
+            android:title="Github" />
+
+            <item
+                android:id="@+id/nav_link"
+                android:icon="@mipmap/lin"
+                android:title="Linkedin" />
+
+            <item
+                android:id="@+id/nav_face"
+                android:icon="@mipmap/face"
+                android:title="Facebook" />
+
+        </menu>
+    </item>
+
+</menu>

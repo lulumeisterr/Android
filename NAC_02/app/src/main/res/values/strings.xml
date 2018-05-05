@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">NAC</string>
+
+    <string name="app_nome">Nome : </string>
+    <string name="app_email">E-mail : </string>
+
+    <string name="app_plNome">Digite o seu nome</string>
+    <string name="app_plEmail">Digite o seu email</string>
+
+    <string name="app_ola">Seja bem vindo !!!</string>
+
+    <string name="app_botao">OK</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+</resources>
