@@ -85,7 +85,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
         Toast.makeText(Main2Activity.this, "Nome : " + nomeOther + "E-mail : " + emailOther, Toast.LENGTH_LONG).show();
 
-
         }
 
     @Override
@@ -148,6 +147,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
                     }else if(id == R.id.nav_tela3){
                         Intent intent = new Intent(Main2Activity.this, Main3Activity.class);
                         startActivity(intent);
+                        finish();
                     }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

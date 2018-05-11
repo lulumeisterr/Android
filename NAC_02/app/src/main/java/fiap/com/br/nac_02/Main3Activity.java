@@ -29,34 +29,34 @@ public class Main3Activity extends AppCompatActivity {
         Toast.makeText(Main3Activity.this, nomeOther + " Você está na terceira tela aberta", Toast.LENGTH_SHORT).show();
     }
 
-    public void Fechar(View view){
-
-        //Recuperando os botao
-
-        botao1 = (Button) findViewById(R.id.idFechar);
-        botao2 = (Button) findViewById(R.id.Fechar3);
-
-        botao1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(botao1.equals(true)){
-                    Intent i = new Intent(Main3Activity.this , Main2Activity.class);
-                    startActivity(i);
-                    finish();
-                }
-            }
-        });
-
-        botao2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(botao2.equals(true)){
-                    Intent i = new Intent(Main3Activity.this , Main3Activity.class);
-                    startActivity(i);
-                    finish();
-                }
-            }
-        });
-
-    }
+//    public void Fechar(View view){
+//
+//        //Recuperando os botao
+//
+//        botao1 = (Button) findViewById(R.id.idFechar);
+//        botao2 = (Button) findViewById(R.id.Fechar3);
+//
+//        botao1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(botao1.equals(true)){
+//                    Intent i = new Intent(Main3Activity.this , Main2Activity.class);
+//                    startActivity(i);
+//                    finish();
+//                }
+//            }
+//        });
+//
+//        botao2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if(botao2.equals(true)){
+//                    Intent i = new Intent(Main3Activity.this , Main3Activity.class);
+//                    startActivity(i);
+//                    finish();
+//                }
+//            }
+//        });
+//
+//    }
 }
