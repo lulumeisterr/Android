@@ -38,7 +38,7 @@ Intent-filter -> Faz com que a MainActivity seja a tela inicial da nossa aplica�
 
 - A Intent descreve a atividade a iniciar e carrega todos os dados necessários.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Activity ->  Activities são componentes independentes que representam as interfaces do seu aplicativo Ou seja
 	representa uma única tela em um aplicativo para os usuários podem interagir para fazer algo, como discar um
@@ -68,7 +68,76 @@ ActionBar -
 	    6 ° Fazer as condições para ter acesso as propriedades dos item's criado
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FRAGMENTS
+
+é um tipo de sub-activity que possoui layout e comportamentos de ciclo de vida proprios
+onde é possivel remover e adicionar fragments durante a execução. 
+
+1 - Um fragmento pode ser reutilizado em diferentes activities
+
+2 - Uma activity pode possuir diversos fragmentos
+
+3 - Um fragmento tem dependência com a Activity master do qual foi chamado
+
+FASES DO FRAGMENTS
+
+1 - é Criado {
+
+Definir quantos fragmentos deseja utilizar
+
+OnAttach()
+Oncreate()
+OncreateView()
+OnActivityCreated()
+}
+
+2 - Se torna visivel {
+
+Baseado no número de 
+fragmentos, 
+é necessário criar a mesma quantidade 
+de classes herdando da superclasse Fragment
+
+
+OnResume()
+OnPause()
+}
+
+3 - Backgroud mode{
+
+Para cada fragmento é necessário criar 
+arquivos de layout XML que representam o fragmento
+
+OnStop()
+
+}
+
+4 - Destruido {
+
+Programar a Activity que controla os fragmentos
+
+OnDestroyView()
+OnDestroy()
+onDetach()
+
+}
+
+Criando uma fragment
+
+1 - Crie uma classe chamada MainFragment e estenda a classe Fragment do 
+2 - Criar um layout XML para esse Fragment com o nome de main_fragment.xml.
+
+Para unir o Fragment ao layout, basta implementar o método onCreateView() 
+passando o ID do arquivo de layout criado.
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.ID_fragment, container, false);
+    }
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 onCreate() - É a primeira função que deve ser chamada em uma Activity. 
 	     responsável por carregar os layouts XML e outras operações de inicialização. 
@@ -100,11 +169,10 @@ onStop() - chamado quando a Activity não está mais visível para o usuário.
 onDestroy() - O método onDestroy é chamado quando a Activity vai ser destruida.  
 	    É a última chamada que a Activity receberá antes de ser finalizada.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Views
-
 - O alinhamento da view pode ser realizado através da propriedade android:layout_gravity e que pode ser center_vertical, center_horizontal
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 LinearLayoult - Layout que organiza os filhos em uma única linha horizontal ou vertical.
                 Ele cria uma barra de rolagem se o comprimento da janela excede o comprimento da tela.
 	        Para decidir qual será a orientação do seu Linear Layout deve-se trabalhar 
@@ -119,13 +187,12 @@ A propriedade android:orientation define a orientação: vertical ou horizontal;
 A Propriedade android:layout_weight="1" , ocupa todo o espaço disponivel;
 A Propriedade android:layout_gravity , é o posicionamento da view 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TABLE LAYOUT
 
 Organiza as views em uma tabela de modo semelhante às tabelas HTML;
 Cada linha da tabela é representada por uma TableRow;
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 RelativeLayoult - Organiza as views em posições relativas. A posição de cada elemento pode ser definido em relação ao outro elemento da tela;
 
 
@@ -141,10 +208,10 @@ android:layout_toRightOf:          a direita da view;
 android:layout_toLeftOf:            a esquerda da view;
 android:layout_above:              acima da view;
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wrap_content -  o componente ocupa a medida necessária do que estiver contido nele 
 match_parent - Ocupa toda a extensão da tela de acordo com o componente pai
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Android Manifest - Onde contem as principais configurações para rodar o app
 
 package = " Ele é o identificador unico do aplicativo "
@@ -154,7 +221,7 @@ package = " Ele é o identificador unico do aplicativo "
 
 Exibir permissoes no manifest <uses-permission android:name="">
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Arquivo R.java
 
 O Arquivo R.java , é um arquivo gerado automaticamente , e a função
@@ -166,7 +233,7 @@ Exemplo que eu queria chamar uma imagem dentro do main no metodo
 onCreate , Basta setar o metodo setContentView(R.pastaEscolhida);
 R se referencia como res ou resource
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dimen
 
 Ele centraliza as dimensões dos arquivos como
@@ -174,7 +241,7 @@ Ele centraliza as dimensões dos arquivos como
 
 dp = density independent pixel == Controllar dimensoes
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Arquivo strings.xml
 
 este arquivo serve para centralizar os textos que vc utiliza em seu
@@ -183,11 +250,10 @@ app.
 é possivel criar strings dentro do xml e utilizar os textos
 que vc criou em varios locais tipo suas paginas de layout
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 XML - Linguagem de marcação
 Estruturas usadas : tags
 
 Usamos xml pois a maior parte dos arquivos no android usa-se XML
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 https://developer.android.com/guide/components/intents-filters.html
