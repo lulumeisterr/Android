@@ -241,6 +241,31 @@ Ele centraliza as dimensões dos arquivos como
 
 dp = density independent pixel == Controllar dimensoes
 
+    px:
+
+DEFINIÇÃO: Correspondente ao número de pixels da tela USO: evite utilizar px para tudo, apenas em casos bem específicos é recomendada.
+
+    sp:
+
+DEFINIÇÃO: (Scale-independent Pixels) Idem ao dp, mas também considera o tamanho da fonte que o usuário está utilizando. 
+
+  dip ou dp:
+
+DEFINIÇÃO: (Density-independent Pixels) Essa unidade é relativa à resolução da tela. Por exemplo se a resolução da tela é de 160 dpi, significa que um dp representa 1 pixel em um total de 160. USO: aconselho ao invés de usar o px sempre use o dp.
+
+Ainda temos outras unidades de medidas utilizadas pelo Android
+
+    in: (polegadas)
+
+DEFINIÇÃO: Baseado no tamanho físico da tela
+
+    mm: (milímetro)
+
+DEFINIÇÃO: Baseado no tamanho físico da tela
+
+    pt: (pontos)
+
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Arquivo strings.xml
 
@@ -255,5 +280,39 @@ XML - Linguagem de marcação
 Estruturas usadas : tags
 
 Usamos xml pois a maior parte dos arquivos no android usa-se XML
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Passagem de dados para outra tela
+
+Intent intent = new Intent(MainActivity.this , Main2Activity.class);
+
+// Recuperar os valores
+
+EditText nome = (EditText) findViewById(R.id.editText);
+EditText email = (EditText) findViewById(R.id.editText2);
+
+// Converter os valores para string
+
+ String x = nome.getText().toString();
+ String y = email.getText().toString();
+
+// Enviando parametros , onde sera carregado os nossos dados
+// Bundle, ele é responsável por guardar o estado da Activity quando ela é reiniciada, como se fosse um cache
+  Bundle parametro = new Bundle();
+
+    parametro.putString("nome_pessoa" , x);
+    parametro.putString("email_pessoa" , y);
+
+   1 - o método putExtra("chave","valor") serve para adicionar um objeto o 
+   	valor para uma intent para enviar para outra Activity.
+	
+	 intent.putExtras(parametro);
+	
+   2 - O método getExtra("chave") serve para recuperar o valor enviado a uma Activity.
+  
+   // Startar a actv
+   startActivity(intent);
+
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 https://developer.android.com/guide/components/intents-filters.html
