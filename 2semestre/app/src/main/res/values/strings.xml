@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Persistencia-1</string>
+    <string name="app_nome">Digite seu nome</string>
+    <string name="app_senha">Digite sua senha</string>
+    <string name="app_texto">Manter connectado</string>
+    <string name="login">login</string>
+    <string name="logout">logout</string>
+    <string name="login_invalido">LOGIN INVALIDO , TENTE NOVAMENTE </string>
+</resources>
