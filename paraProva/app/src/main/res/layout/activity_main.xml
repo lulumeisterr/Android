@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/informe_o_material_que_deseja"
+        android:layout_marginTop="5dp"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rdgProdutos"
+        >
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PisoA"
+            android:id="@+id/rdbPisoBrancoBaixoBrilho"
+            android:checked="true"
+            />
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PisoAA"
+            android:id="@+id/rdbPisoAlbaina"
+            />
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PisoPP"
+            android:id="@+id/rdbPisoBranco"
+            />
+
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/PisoRV"
+            android:id="@+id/Revestimento"
+            />
+
+        </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/informe_o_material_que_deseja"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/numero"
+        android:id="@+id/Medida"
+        android:inputType="numberDecimal"
+        />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/UltraMegaRapido"
+        android:layout_marginTop="10dp"
+        android:id="@+id/chkUltraFrete"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/Calcular"
+        android:layout_marginTop="20dp"
+        android:onClick="calcular"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/r_00_00"
+        android:id="@+id/txtResultado"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/PassandoValores"
+        android:onClick="nextPaginas"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="informe_o_material_que_deseja">Informe o material que deseja</string>
+    <string name="PisoA">Piso Branco Baixo Brilho</string>
+    <string name="PisoAA">Piso Albania 45x45</string>
+    <string name="PisoPP">Piso Perlato Branco</string>
+    <string name="PisoRV">Revestimento mosaico</string>
+    <string name="Informe">Informe o material que deseja</string>
+    <string name="numero">ex: 10</string>
+    <string name="UltraMegaRapido">Ultra Mega Rapido</string>
+    <string name="Calcular">Calcular</string>
+    <string name="r_00_00">$ 0.00</string>
+    <string name="informe_a_medida">Informe a medida</string>
+    <string name="PassandoValores">Proxima Pagina</string>
+    <string name="usuario">Digite o usuario</string>
+    <string name="app_senha">senha</string>
+    <string name="login">login</string>
+    <string name="app_nome">nome</string>
+    <string name="login_invalido">login</string>
+</resources>
