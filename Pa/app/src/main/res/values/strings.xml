@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="LoginNome">Digite seu login</string>
+    <string name="Login">Lgon</string>
+    <string name="LoginSenha">Digite sua senha</string>
+    <string name="conect">Manter Conectado</string>
+    <string name="Logar">Login</string>
+    <string name="cor">Preto</string>
+    <string name="Salvei">Salvar</string>
+    <string name="Logins">Login</string>
+    <string name="Senhas">Senha</string>
+    <string name="Pref">Escolha seu tema preferido</string>
+    <string name="Vermelho">Vermelho</string>
+    <string name="Azul">Azul</string>
+    <string name="Verde">Verde</string>
+    <string name="savepw">Salvar usuário e senha ?</string>
+</resources>
